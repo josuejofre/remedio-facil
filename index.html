@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Remédio Fácil | Organizador Inteligente de Medicamentos</title>
-  <meta name="description" content="Apresentação do produto Remédio Fácil: Organizador Inteligente de Medicamentos desenvolvido através de Metodologia Híbrida (Cascata + Ágil) com orçamento de R$ 500.000.">
+  <title>Remédio Fácil | Desenvolvimento Híbrido & Desafios de Escopo</title>
+  <meta name="description" content="Apresentação completa do Remédio Fácil: Desenvolvimento em Metodologia Híbrida respondendo aos Eventos Inesperados 01, 02 e 03 do Desafio Sprint ou Naufrágio.">
   
   <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --bg-primary: #0a0f1d;
       --bg-secondary: #111827;
-      --bg-card: rgba(19, 29, 49, 0.75);
-      --bg-card-hover: rgba(28, 42, 70, 0.85);
+      --bg-card: rgba(19, 29, 49, 0.78);
       --border-color: rgba(56, 189, 248, 0.18);
       --border-glow: rgba(56, 189, 248, 0.45);
       
@@ -33,8 +32,8 @@
       --text-sub: #cbd5e1;
       
       --gradient-brand: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
-      --gradient-success: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
       --gradient-warning: linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%);
+      --gradient-danger: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
       
       --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
       --radius-sm: 8px;
@@ -179,7 +178,7 @@
       border-color: var(--accent-cyan);
     }
 
-    /* Slides Deck */
+    /* Deck */
     main.presentation-deck {
       position: relative;
       z-index: 10;
@@ -218,7 +217,7 @@
     }
 
     .slide-header {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .slide-category {
@@ -230,7 +229,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--accent-cyan);
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .slide-category::before {
@@ -244,7 +243,7 @@
 
     .slide-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 2.1rem;
+      font-size: 2.05rem;
       font-weight: 700;
       line-height: 1.2;
       color: #ffffff;
@@ -252,10 +251,10 @@
     }
 
     .slide-subtitle {
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       color: var(--text-muted);
-      margin-top: 4px;
-      max-width: 900px;
+      margin-top: 3px;
+      max-width: 950px;
       line-height: 1.45;
     }
 
@@ -285,7 +284,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 20px;
+      padding: 18px 20px;
       backdrop-filter: blur(16px);
       box-shadow: var(--shadow-card);
       position: relative;
@@ -300,29 +299,29 @@
     }
 
     .card-icon-wrap {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       background: rgba(56, 189, 248, 0.12);
       border: 1px solid rgba(56, 189, 248, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--accent-cyan);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
     }
 
     .card-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       font-weight: 600;
       color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .card-text {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-sub);
       line-height: 1.55;
     }
@@ -334,7 +333,7 @@
       gap: 5px;
       padding: 3px 10px;
       border-radius: 20px;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -343,9 +342,80 @@
     .pill-cyan { background: rgba(6, 182, 212, 0.15); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.3); }
     .pill-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
     .pill-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .pill-rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
     .pill-purple { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3); }
 
-    /* Footer Navigation */
+    /* ESTILOS ESPECIAIS PARA OS CARDS DE EVENTO INESPERADO */
+    .event-hud-card {
+      background: linear-gradient(145deg, #090e1a, #030712);
+      border: 2px solid;
+      border-radius: 20px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+
+    .event-hud-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: currentColor;
+    }
+
+    .hud-warning { border-color: #f59e0b; color: #f59e0b; }
+    .hud-danger { border-color: #ef4444; color: #ef4444; }
+    .hud-decision { border-color: #38bdf8; color: #38bdf8; }
+
+    .event-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 10px;
+    }
+
+    .event-huge-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .event-prompt-box {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 12px 16px;
+      border-left: 4px solid currentColor;
+      margin: 10px 0;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .team-resolution-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    /* Footer */
     footer.bottom-bar {
       position: relative;
       z-index: 50;
@@ -421,7 +491,7 @@
       color: var(--text-sub);
     }
 
-    /* Hero Slide */
+    /* Hero */
     .hero-slide {
       display: flex;
       flex-direction: column;
@@ -442,58 +512,58 @@
       color: #38bdf8;
       font-size: 0.88rem;
       font-weight: 600;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .hero-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 3.5rem;
+      font-size: 3.4rem;
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.1;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       background: linear-gradient(135deg, #ffffff 30%, #38bdf8 75%, #818cf8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-sub);
-      max-width: 780px;
+      max-width: 820px;
       line-height: 1.55;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .hero-metrics {
       display: flex;
-      gap: 18px;
+      gap: 16px;
     }
 
     .metric-pill {
       background: rgba(19, 29, 49, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
-      padding: 12px 22px;
+      padding: 12px 20px;
       text-align: left;
-      min-width: 160px;
+      min-width: 155px;
     }
 
     .metric-val {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--accent-cyan);
     }
 
     .metric-lbl {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
       text-transform: uppercase;
       margin-top: 2px;
     }
 
-    /* Protótipo Interativo */
+    /* Protótipo */
     .prototype-container {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -506,7 +576,7 @@
       background: linear-gradient(145deg, #1e293b, #0f172a);
       border: 2px solid rgba(56, 189, 248, 0.3);
       border-radius: 32px;
-      padding: 24px;
+      padding: 22px;
       position: relative;
       box-shadow: 0 20px 50px rgba(0,0,0,0.6);
       display: flex;
@@ -517,15 +587,15 @@
     }
 
     .device-carousel {
-      width: 200px;
-      height: 200px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
       border: 7px dashed rgba(56, 189, 248, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
@@ -535,8 +605,8 @@
     }
 
     .carousel-center {
-      width: 110px;
-      height: 110px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       background: #090e17;
       border: 3px solid var(--accent-cyan);
@@ -573,15 +643,15 @@
 
     .pill-slot {
       position: absolute;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       background: #1e293b;
       border: 2px solid #38bdf8;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 700;
       color: #ffffff;
     }
@@ -596,16 +666,16 @@
       background: #090d16;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 14px;
-      padding: 12px;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .dispense-cup {
-      width: 46px;
-      height: 38px;
+      width: 44px;
+      height: 36px;
       background: rgba(56, 189, 248, 0.2);
       border: 2px solid var(--accent-cyan);
       border-radius: 0 0 14px 14px;
@@ -627,10 +697,10 @@
       background: #0284c7;
       color: white;
       border: none;
-      padding: 9px 16px;
+      padding: 9px 14px;
       border-radius: 10px;
       font-weight: 700;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       cursor: pointer;
       box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
       transition: all 0.2s;
@@ -641,7 +711,7 @@
       transform: scale(1.02);
     }
 
-    /* Phone Mockup */
+    /* Phone */
     .phone-mockup {
       width: 280px;
       background: #020617;
@@ -656,7 +726,7 @@
       background: #0f172a;
       border-radius: 22px;
       padding: 14px;
-      height: 360px;
+      height: 350px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -667,29 +737,9 @@
       border: 1px solid rgba(56, 189, 248, 0.3);
       border-radius: 12px;
       padding: 10px;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
-    /* Equipe Grid */
-    .team-role-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 14px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .team-role-badge {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 6px;
-    }
-
-    /* Tabela */
     .table-compare {
       width: 100%;
       border-collapse: collapse;
@@ -697,7 +747,7 @@
     }
 
     .table-compare th, .table-compare td {
-      padding: 10px 12px;
+      padding: 9px 12px;
       text-align: left;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -707,30 +757,6 @@
       font-weight: 700;
       text-transform: uppercase;
       font-size: 0.72rem;
-    }
-
-    /* Modal Help */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-glow);
-      border-radius: var(--radius-lg);
-      padding: 26px;
-      max-width: 460px;
-      width: 90%;
     }
 
     @media (max-width: 1024px) {
@@ -745,7 +771,7 @@
   <div class="ambient-glow"></div>
   <div class="ambient-glow-2"></div>
 
-  <!-- Header -->
+  <!-- Top Bar -->
   <header class="top-bar">
     <div class="brand-container">
       <div class="brand-icon">💊</div>
@@ -756,7 +782,7 @@
     </div>
 
     <div class="top-controls">
-      <div class="slide-counter-badge">Slide <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">11</span></div>
+      <div class="slide-counter-badge">Slide <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">14</span></div>
       <button class="btn-icon" id="btnHelp" title="Atalhos do Teclado">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
       </button>
@@ -772,17 +798,17 @@
     <!-- SLIDE 1: Capa & Pitch -->
     <section class="slide active hero-slide" data-slide="1">
       <div class="hero-badge">
-        <span>⚡ Primeira Rodada — Criação do Produto</span>
+        <span>⚡ Metodologia Híbrida: Da Concepção à Resiliência</span>
       </div>
       <h1 class="hero-title">Remédio Fácil</h1>
       <p class="hero-subtitle">
-        Organizador Inteligente de Medicamentos: Hardware motorizado de dispensa precisa integrado ao aplicativo móvel de gestão e notificação familiar.
+        Organizador Inteligente de Medicamentos: Unindo o rigor da engenharia física de controle e a flexibilidade ágil para superar eventos críticos e mudanças de escopo.
       </p>
 
       <div class="hero-metrics">
         <div class="metric-pill">
-          <div class="metric-val">R$ 500k</div>
-          <div class="metric-lbl">Orçamento da Missão</div>
+          <div class="metric-val">3 Eventos</div>
+          <div class="metric-lbl">Inesperados Vencidos</div>
         </div>
         <div class="metric-pill">
           <div class="metric-val">Hardware + App</div>
@@ -790,73 +816,54 @@
         </div>
         <div class="metric-pill">
           <div class="metric-val">Híbrido</div>
-          <div class="metric-lbl">Cascata + Ágil</div>
+          <div class="metric-lbl">Stage-Gate + Ágil</div>
         </div>
         <div class="metric-pill">
-          <div class="metric-val">Zero Erros</div>
-          <div class="metric-lbl">Segurança no Idoso</div>
+          <div class="metric-val">100% Seguro</div>
+          <div class="metric-lbl">Trava Anti-Dose Dupla</div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 2: Organização da Equipe (Conforme a Dinâmica) -->
+    <!-- SLIDE 2: Organização da Equipe -->
     <section class="slide" data-slide="2">
       <div class="slide-header">
-        <div class="slide-category">Dinâmica de Grupo • 7 Minutos</div>
+        <div class="slide-category">Dinâmica de Grupo • Primeira Rodada</div>
         <h2 class="slide-title">Organização da Nossa Equipe</h2>
-        <p class="slide-subtitle">Distribuição de papéis estratégicos para garantir foco, velocidade e conformidade com a metodologia híbrida.</p>
+        <p class="slide-subtitle">Distribuição de papéis estratégicos para garantir foco, velocidade e governança híbrida.</p>
       </div>
 
       <div class="grid-4">
-        <div class="team-role-card" style="border-top: 3px solid var(--accent-cyan);">
-          <div>
-            <div class="team-role-badge" style="color: var(--accent-cyan);">📝 Papel 1</div>
-            <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Pessoa para Registrar</h3>
-            <p class="card-text">
-              Responsável por documentar as decisões estruturadas de produto, atas dos portões de decisão e especificações funcionais.
-            </p>
-          </div>
-          <div style="margin-top: 12px;"><span class="pill pill-cyan">Registro & Atas</span></div>
+        <div class="card" style="border-top: 3px solid var(--accent-cyan);">
+          <div class="pill pill-cyan" style="align-self: flex-start; margin-bottom: 8px;">📝 Papel 1</div>
+          <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Pessoa para Registrar</h3>
+          <p class="card-text">
+            Documentação das decisões de produto, requisitos estruturados, registros de rastreabilidade e atas dos Portões Formais (Gates).
+          </p>
         </div>
 
-        <div class="team-role-card" style="border-top: 3px solid var(--accent-amber);">
-          <div>
-            <div class="team-role-badge" style="color: var(--accent-amber);">⏱️ Papel 2</div>
-            <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Controlar o Tempo</h3>
-            <p class="card-text">
-              Timekeeper rigoroso dos 7 minutos da rodada e do timeboxing das Sprints, evitando paralisia por análise.
-            </p>
-          </div>
-          <div style="margin-top: 12px;"><span class="pill pill-amber">Timeboxing</span></div>
+        <div class="card" style="border-top: 3px solid var(--accent-amber);">
+          <div class="pill pill-amber" style="align-self: flex-start; margin-bottom: 8px;">⏱️ Papel 2</div>
+          <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Controlar o Tempo</h3>
+          <p class="card-text">
+            Timekeeper rigoroso dos minutos de cada evento inesperado e do timeboxing das Sprints, evitando paralisia por análise.
+          </p>
         </div>
 
-        <div class="team-role-card" style="border-top: 3px solid var(--accent-teal);">
-          <div>
-            <div class="team-role-badge" style="color: var(--accent-teal);">🎤 Papel 3</div>
-            <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Pessoa para Apresentar</h3>
-            <p class="card-text">
-              Porta-voz oficial do produto perante a banca, transmitindo a proposta de valor com clareza, empatia e segurança técnica.
-            </p>
-          </div>
-          <div style="margin-top: 12px;"><span class="pill pill-green">Pitch & Valor</span></div>
+        <div class="card" style="border-top: 3px solid var(--accent-teal);">
+          <div class="pill pill-green" style="align-self: flex-start; margin-bottom: 8px;">🎤 Papel 3</div>
+          <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Pessoa para Apresentar</h3>
+          <p class="card-text">
+            Porta-voz oficial do produto perante a banca, transmitindo a proposta de valor com empatia e segurança técnica.
+          </p>
         </div>
 
-        <div class="team-role-card" style="border-top: 3px solid var(--accent-violet);">
-          <div>
-            <div class="team-role-badge" style="color: var(--accent-violet);">👁️ Papel 4</div>
-            <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Observador da Abordagem</h3>
-            <p class="card-text">
-              Guardião da <strong>Metodologia Híbrida</strong>: assegura que hardware siga controles de engenharia e software mantenha ciclos ágeis.
-            </p>
-          </div>
-          <div style="margin-top: 12px;"><span class="pill pill-purple">Guardião Híbrido</span></div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top: 18px; padding: 14px 20px; flex-direction: row; align-items: center; gap: 14px;">
-        <span style="font-size: 1.5rem;">⚖️</span>
-        <div style="font-size: 0.88rem; color: var(--text-sub);">
-          <strong>Alinhamento Metodológico:</strong> Cada papel reflete a disciplina necessária para não naufragar o orçamento de R$ 500.000 entre rigor e adaptação.
+        <div class="card" style="border-top: 3px solid var(--accent-violet);">
+          <div class="pill pill-purple" style="align-self: flex-start; margin-bottom: 8px;">👁️ Papel 4</div>
+          <h3 style="font-family: 'Outfit'; font-size: 1.15rem; color: #ffffff; margin-bottom: 6px;">Observador da Abordagem</h3>
+          <p class="card-text">
+            Guardião da <strong>Metodologia Híbrida</strong>: assegura que o hardware mantenha os controles de engenharia e o software mantenha a agilidade.
+          </p>
         </div>
       </div>
     </section>
@@ -864,100 +871,74 @@
     <!-- SLIDE 3: Público Específico -->
     <section class="slide" data-slide="3">
       <div class="slide-header">
-        <div class="slide-category">Definição do Público-Alvo</div>
-        <h2 class="slide-title">Quem é o Público Específico do Remédio Fácil?</h2>
-        <p class="slide-subtitle">Solução desenhada para o binômio inseparável do cuidado: a pessoa idosa e a sua rede de apoio familiar.</p>
+        <div class="slide-category">Definição do Usuário Principal</div>
+        <h2 class="slide-title">Público Específico: O Binômio do Cuidado</h2>
+        <p class="slide-subtitle">Projetado para quem precisa de autonomia para tomar o remédio e tranquilidade para quem cuida.</p>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
-            <div style="font-size: 2.8rem; background: rgba(6, 182, 212, 0.15); width: 70px; height: 70px; border-radius: 18px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(6, 182, 212, 0.3);">👵</div>
+          <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 10px;">
+            <div style="font-size: 2.5rem; background: rgba(6, 182, 212, 0.15); width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(6, 182, 212, 0.3);">👵</div>
             <div>
-              <h3 class="card-title" style="margin: 0;">Público Principal: Pessoas Idosas</h3>
-              <div style="color: var(--accent-cyan); font-size: 0.84rem; font-weight: 600;">Polimedicadas • 65+ Anos</div>
+              <h3 class="card-title" style="margin: 0;">Usuário Final: Pessoas Idosas</h3>
+              <div style="color: var(--accent-cyan); font-size: 0.82rem; font-weight: 600;">Polimedicadas • 65+ Anos</div>
             </div>
           </div>
           <p class="card-text">
-            Idosos com doenças crônicas (hipertensão, diabetes, cardiopatias) que consom de 4 a 8 comprimidos diários em horários fragmentados.
+            Idosos com doenças crônicas que tomam múltiplos comprimidos diários. Dores: perda de memória recente, visão reduzida para cartelas e dificuldade motora para abrir blisters.
           </p>
-          <ul style="margin-top: 12px; margin-left: 18px; font-size: 0.86rem; color: var(--text-sub); line-height: 1.6;">
-            <li><strong>Dificuldade de memória:</strong> Esquecem se já tomaram ou se ainda vão tomar a dose;</li>
-            <li><strong>Confusão visual e motora:</strong> Cartelas com letras minúsculas e blisters difíceis de destacar;</li>
-            <li><strong>Risco letal:</strong> Duplicidade acidental de dose (intoxicação por sobredose).</li>
-          </ul>
         </div>
 
         <div class="card">
-          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 12px;">
-            <div style="font-size: 2.8rem; background: rgba(16, 185, 129, 0.15); width: 70px; height: 70px; border-radius: 18px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(16, 185, 129, 0.3);">👨‍👩‍👧</div>
+          <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 10px;">
+            <div style="font-size: 2.5rem; background: rgba(16, 185, 129, 0.15); width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(16, 185, 129, 0.3);">👨‍👩‍👧</div>
             <div>
-              <h3 class="card-title" style="margin: 0;">Público Corresponsável: Familiares</h3>
-              <div style="color: var(--accent-teal); font-size: 0.84rem; font-weight: 600;">Filhos, Cuidadores & Rede de Apoio</div>
+              <h3 class="card-title" style="margin: 0;">Corresponsáveis: Familiares & Cuidadores</h3>
+              <div style="color: var(--accent-teal); font-size: 0.82rem; font-weight: 600;">Filhos que trabalham fora</div>
             </div>
           </div>
           <p class="card-text">
-            Filhos ou cuidadores que trabalham fora, residem em casas separadas e vivem sob estresse constante de não saberem se o idoso tomou o remédio.
+            Vivem sob o estresse de não saber se o idoso tomou o remédio a tempo. Querem telemetria passiva em tempo real e notificações caso ocorra atraso.
           </p>
-          <ul style="margin-top: 12px; margin-left: 18px; font-size: 0.86rem; color: var(--text-sub); line-height: 1.6;">
-            <li><strong>Angústia da distância:</strong> Necessidade de telefonar repetidas vezes ao dia;</li>
-            <li><strong>Sobrecarga mental:</strong> Controle manual de estoques e reposição de receitas;</li>
-            <li><strong>Demanda:</strong> Querem paz de espírito e relatórios objetivos para levar ao médico geriatra.</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 4: As 3 Funcionalidades Chave -->
+    <!-- SLIDE 4: As 3 Funcionalidades Iniciais -->
     <section class="slide" data-slide="4">
       <div class="slide-header">
-        <div class="slide-category">Arquitetura da Solução</div>
-        <h2 class="slide-title">As Três Funcionalidades do Remédio Fácil</h2>
-        <p class="slide-subtitle">Conectando software na nuvem, telemetria familiar e engenharia mecânica de precisão.</p>
+        <div class="slide-category">Arquitetura de Produto</div>
+        <h2 class="slide-title">As Três Funcionalidades Essenciais</h2>
+        <p class="slide-subtitle">A integração entre software inteligente na nuvem e hardware eletromecânico preciso.</p>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <div class="card-icon-wrap">📋</div>
           <span class="pill pill-cyan">Funcionalidade 1</span>
-          <h3 class="card-title" style="margin-top: 10px;">1. Gestão de Medicamentos</h3>
+          <h3 class="card-title" style="margin-top: 8px;">1. Gestão de Medicamentos</h3>
           <p class="card-text">
-            Software intuitivo de cadastro e controle de tratamentos:
+            Programação facilitada de prescrições, horários, dosagens e acompanhamento do estoque de comprimidos com histórico clínico completo.
           </p>
-          <ul style="margin-top: 8px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.5;">
-            <li><strong>Leitura de receita médica</strong> por foto ou importação digital;</li>
-            <li>Programação de frequências (diária, semanal, intervalos especiais);</li>
-            <li><strong>Gestão de estoque:</strong> Aviso antecipado de quando as pílulas estão acabando;</li>
-            <li>Histórico completo de adesão terapêutica exportável em PDF.</li>
-          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon-wrap" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">🔔</div>
           <span class="pill pill-amber">Funcionalidade 2</span>
-          <h3 class="card-title" style="margin-top: 10px;">2. Alertas & Notificação dos Familiares</h3>
+          <h3 class="card-title" style="margin-top: 8px;">2. Alertas & Notificação Familiar</h3>
           <p class="card-text">
-            Rede ativa de comunicação multicanal e segura:
+            Lembretes audiovisuais no dispositivo e envio de telemetria em tempo real no App e WhatsApp dos familiares se a dose não for retirada em 20 min.
           </p>
-          <ul style="margin-top: 8px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.5;">
-            <li><strong>Para o Idoso:</strong> Anel de LED brilhante + lembrete por voz amigável em português;</li>
-            <li><strong>Para o Familiar:</strong> Notificação instantânea no App quando a dose for retirada;</li>
-            <li><strong>Escalonamento de urgência:</strong> Se a dose não for retirada em 20 minutos, dispara mensagem de socorro no <strong>WhatsApp</strong> do cuidador.</li>
-          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon-wrap" style="color: var(--accent-teal); background: rgba(16, 185, 129, 0.12);">⚙️</div>
           <span class="pill pill-green">Funcionalidade 3</span>
-          <h3 class="card-title" style="margin-top: 10px;">3. Módulo de Dispensa Inteligente (Hardware)</h3>
+          <h3 class="card-title" style="margin-top: 8px;">3. Dispensa Inteligente (Hardware)</h3>
           <p class="card-text">
-            Dispensador físico motorizado integrado ao ecossistema:
+            Carrossel rotativo motorizado que libera somente o compartimento do horário agendado, com sensor de retirada real e trava anti-erro.
           </p>
-          <ul style="margin-top: 8px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.5;">
-            <li><strong>Carrossel blindado:</strong> Libera apenas o compartimento exato da hora estipulada;</li>
-            <li><strong>Trava mecânica anti-dose dupla:</strong> O idoso não consegue abrir slots de outros horários;</li>
-            <li><strong>Sensor óptico infravermelho:</strong> Confirma se o medicamento foi efetivamente retirado do copinho.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -965,66 +946,54 @@
     <!-- SLIDE 5: Diferencial do Produto -->
     <section class="slide" data-slide="5">
       <div class="slide-header">
-        <div class="slide-category">Posicionamento de Mercado</div>
-        <h2 class="slide-title">O Diferencial do Remédio Fácil</h2>
-        <p class="slide-subtitle">A simbiose perfeita entre Hardware Físico e Aplicativo Móvel com Zero Atrito para o Idoso.</p>
+        <div class="slide-category">Diferencial Competitivo</div>
+        <h2 class="slide-title">O Grande Diferencial: Zero Complexidade</h2>
+        <p class="slide-subtitle">O idoso não precisa mexer em menus digitais; o aparelho fala e entrega o copinho pronto.</p>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <h3 class="card-title" style="color: #38bdf8;">✦ "Inteligência na Família, Simplicidade no Idoso"</h3>
-          <p class="card-text" style="margin-bottom: 12px;">
-            A maioria dos concorrentes erra ao colocar telas touch minúsculas e interfaces digitais confusas para quem tem mais de 75 anos de idade.
+          <h3 class="card-title" style="color: #38bdf8;">✦ Filosofia "Inteligência na Família, Simplicidade no Idoso"</h3>
+          <p class="card-text" style="margin-bottom: 10px;">
+            Aparelhos concorrentes falham por exigir telas touch sensíveis ao toque que tremem na mão de idosos ou exigem configuração complexa de Wi-Fi.
           </p>
-          <div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; padding: 14px; margin-bottom: 12px;">
-            <div style="color: #34d399; font-weight: 700; margin-bottom: 4px;">No Aparelho Remédio Fácil:</div>
+          <div style="background: rgba(255, 255, 255, 0.03); border-radius: 10px; padding: 12px;">
             <p style="font-size: 0.86rem; color: var(--text-sub);">
-              Experiência 100% tátil e auditiva. O idoso ouve a voz acolhedora, vê a luz suave e pega o copinho magnético. Sem senhas, sem botões minúsculos, sem Wi-Fi para configurar.
-            </p>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; padding: 14px;">
-            <div style="color: #38bdf8; font-weight: 700; margin-bottom: 4px;">No Smartphone do Familiar:</div>
-            <p style="font-size: 0.86rem; color: var(--text-sub);">
-              Gestão clínica completa, sincronização automática com a nuvem, abastecimento facilitado uma vez por semana e telemetria de segurança 24 horas por dia.
+              No <strong>Remédio Fácil</strong>, o idoso tem apenas estímulos físicos confortáveis (voz em português, luz suave e copinho magnético). Toda a gestão fica no celular do familiar.
             </p>
           </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Matriz Comparativa de Valor</h3>
+          <h3 class="card-title">Quadro Comparativo</h3>
           <table class="table-compare">
             <thead>
               <tr>
                 <th>Recursos</th>
-                <th>Caixas Manuais</th>
+                <th>Caixas Comuns</th>
                 <th>Remédio Fácil</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Proteção contra dose dupla</strong></td>
-                <td>❌ Nenhuma (abre tudo)</td>
-                <td><span style="color: #34d399; font-weight: 700;">✔ Trava Eletromecânica</span></td>
+                <td>Proteção contra dose dupla</td>
+                <td>❌ Nenhuma</td>
+                <td><span style="color: #34d399; font-weight: 700;">✔ Trava Mecânica</span></td>
               </tr>
               <tr>
-                <td><strong>Alerta ativo de horário</strong></td>
-                <td>❌ Depende da memória</td>
-                <td><span style="color: #34d399; font-weight: 700;">✔ Luz + Voz em Português</span></td>
+                <td>Alerta ativo de horário</td>
+                <td>❌ Nenhum</td>
+                <td><span style="color: #34d399; font-weight: 700;">✔ Voz + LED</span></td>
               </tr>
               <tr>
-                <td><strong>Notificação de cuidadores</strong></td>
+                <td>Acompanhamento à distância</td>
                 <td>❌ Inexistente</td>
                 <td><span style="color: #34d399; font-weight: 700;">✔ App + WhatsApp</span></td>
               </tr>
               <tr>
-                <td><strong>Detecção de retirada real</strong></td>
+                <td>Confirmação de retirada real</td>
                 <td>❌ Nenhuma</td>
                 <td><span style="color: #34d399; font-weight: 700;">✔ Sensor Óptico IR</span></td>
-              </tr>
-              <tr>
-                <td><strong>Acessibilidade & Usabilidade</strong></td>
-                <td>Baixa (blister duro)</td>
-                <td><span style="color: #38bdf8; font-weight: 700;">Alta (Copinho Ergonômico)</span></td>
               </tr>
             </tbody>
           </table>
@@ -1032,12 +1001,12 @@
       </div>
     </section>
 
-    <!-- SLIDE 6: Representação Visual / Protótipo Interativo -->
+    <!-- SLIDE 6: Protótipo Interativo -->
     <section class="slide" data-slide="6">
-      <div class="slide-header" style="margin-bottom: 10px;">
+      <div class="slide-header" style="margin-bottom: 8px;">
         <div class="slide-category">Representação Visual do Protótipo</div>
         <h2 class="slide-title">Protótipo Integrado: Hardware + Aplicativo</h2>
-        <p class="slide-subtitle">Simulação real da rotina: teste a dispensa mecânica e acompanhe a sincronização do app do familiar.</p>
+        <p class="slide-subtitle">Simulação da rotina: teste a liberação mecânica e acompanhe a telemetria no celular do cuidador.</p>
       </div>
 
       <div class="prototype-container">
@@ -1045,7 +1014,7 @@
         <div class="device-mockup" id="deviceBox">
           <div class="led-ring" id="ledRing"></div>
           
-          <div style="font-family: 'Outfit'; font-size: 0.85rem; font-weight: 700; color: #38bdf8; margin-bottom: 10px; letter-spacing: 0.05em;">
+          <div style="font-family: 'Outfit'; font-size: 0.82rem; font-weight: 700; color: #38bdf8; margin-bottom: 8px; letter-spacing: 0.05em;">
             MÓDULO DE DISPENSA INTELIGENTE (HARDWARE)
           </div>
 
@@ -1056,23 +1025,23 @@
             <div class="pill-slot slot-4">20h</div>
             
             <div class="carousel-center">
-              <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Horário</div>
-              <div style="font-family: 'JetBrains Mono'; font-size: 1.25rem; font-weight: 700; color: #ffffff;" id="deviceClock">08:00</div>
-              <div id="deviceStatusText" style="font-size: 0.65rem; color: #38bdf8; margin-top: 3px;">Aguardando</div>
+              <div style="font-size: 0.65rem; color: #94a3b8; text-transform: uppercase;">Horário</div>
+              <div style="font-family: 'JetBrains Mono'; font-size: 1.2rem; font-weight: 700; color: #ffffff;" id="deviceClock">08:00</div>
+              <div id="deviceStatusText" style="font-size: 0.65rem; color: #38bdf8; margin-top: 2px;">Aguardando</div>
             </div>
           </div>
 
           <div class="dispenser-tray">
             <div style="text-align: left;">
-              <div style="font-size: 0.72rem; color: var(--text-muted);">Status do Compartimento</div>
-              <div style="font-size: 0.82rem; font-weight: 600;" id="trayStatus">Trava Ativa (Seguro)</div>
+              <div style="font-size: 0.7rem; color: var(--text-muted);">Status do Compartimento</div>
+              <div style="font-size: 0.8rem; font-weight: 600;" id="trayStatus">Trava Ativa (Seguro)</div>
             </div>
             <div class="dispense-cup" id="dispenseCup">
               💊
             </div>
           </div>
 
-          <div style="display: flex; gap: 8px; margin-top: 14px; width: 100%;">
+          <div style="display: flex; gap: 8px; margin-top: 12px; width: 100%;">
             <button class="btn-device-action" id="btnSimulateTime" style="flex: 1;">
               🔔 Disparar Alarme 08:00
             </button>
@@ -1086,37 +1055,37 @@
         <div class="phone-mockup">
           <div class="phone-screen">
             <div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-bottom: 8px;">
                 <span>08:00</span>
                 <span>📶 Remédio Fácil IoT • 98%</span>
               </div>
               <div style="font-family: 'Outfit'; font-weight: 700; font-size: 1.05rem; color: #ffffff;">
                 Remédio Fácil App
               </div>
-              <div style="font-size: 0.76rem; color: #38bdf8;">Paciente: Dona Neide (Mãe)</div>
+              <div style="font-size: 0.74rem; color: #38bdf8;">Paciente: Dona Neide (Mãe)</div>
 
               <div class="phone-notification" id="appNotification" style="display: none;">
-                <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
                   <span style="font-size: 1.1rem;" id="notifIcon">⏰</span>
                   <div>
-                    <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff;" id="notifTitle">Alarme Acionado</div>
-                    <div style="font-size: 0.7rem; color: #cbd5e1;" id="notifDesc">Dispensador chamando Dona Neide (08h).</div>
+                    <div style="font-size: 0.76rem; font-weight: 700; color: #ffffff;" id="notifTitle">Alarme Acionado</div>
+                    <div style="font-size: 0.68rem; color: #cbd5e1;" id="notifDesc">Dispensador chamando Dona Neide (08h).</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div style="background: rgba(255,255,255,0.03); border-radius: 10px; padding: 10px;">
-              <div style="font-size: 0.72rem; font-weight: 600; color: #94a3b8; margin-bottom: 6px;">Gestão de Doses do Dia:</div>
-              <div style="font-size: 0.75rem; display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <div style="font-size: 0.7rem; font-weight: 600; color: #94a3b8; margin-bottom: 4px;">Gestão de Doses do Dia:</div>
+              <div style="font-size: 0.74rem; display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
                 <span>08:00 - Losartana 50mg</span>
                 <span id="badgePill1" style="color: #fbbf24; font-weight: 600;">Programado</span>
               </div>
-              <div style="font-size: 0.75rem; display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <div style="font-size: 0.74rem; display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
                 <span>12:00 - Metformina 850mg</span>
                 <span style="color: #94a3b8;">Programado</span>
               </div>
-              <div style="font-size: 0.75rem; display: flex; justify-content: space-between; padding: 3px 0;">
+              <div style="font-size: 0.74rem; display: flex; justify-content: space-between; padding: 3px 0;">
                 <span>20:00 - Sinvastatina 20mg</span>
                 <span style="color: #94a3b8;">Programado</span>
               </div>
@@ -1130,272 +1099,415 @@
       </div>
     </section>
 
-    <!-- SLIDE 7: Como o Desenvolvimento Será Organizado -->
+    <!-- SLIDE 7: Metodologia Híbrida Inicial -->
     <section class="slide" data-slide="7">
       <div class="slide-header">
-        <div class="slide-category">Estratégia de Gestão e Engenharia</div>
-        <h2 class="slide-title">Como o Desenvolvimento Será Organizado?</h2>
-        <p class="slide-subtitle">A aplicação prática da Metodologia Híbrida: Equilíbrio entre Adaptação Ágil e Controle Cascata.</p>
+        <div class="slide-category">Engenharia de Processos</div>
+        <h2 class="slide-title">Como o Desenvolvimento É Organizado?</h2>
+        <p class="slide-subtitle">O modelo híbrido original: Portões formais de decisão (Cascata) informados por Sprints ágeis de prototipagem.</p>
       </div>
 
       <div class="grid-2">
         <div class="card" style="border-top: 3px solid var(--accent-amber);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <h3 class="card-title" style="color: #fbbf24; margin: 0;">Trilha Cascata (Stage-Gate)</h3>
-            <span class="pill pill-amber">Hardware Físico</span>
-          </div>
+          <h3 class="card-title" style="color: #fbbf24;">Trilha Estruturada (Cascata / Stage-Gate)</h3>
           <p class="card-text">
-            Utilizada onde os custos de mudança são proibitivos e há exigências regulatórias rigorosas:
+            <strong>Foco:</strong> Hardware mecânico, circuitos elétricos e certificações regulatórias (ANVISA/Inmetro).
           </p>
-          <ul style="margin-top: 10px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
-            <li><strong>Requisitos Mais Estruturados:</strong> Especificações de torque de motores, dimensões mecânicas e tolerâncias;</li>
-            <li><strong>Validações Formais (Gates):</strong> Congelamento de esquema elétrico da placa PCB antes do envio à fábrica;</li>
-            <li><strong>Conformidade Regulatória:</strong> Ensaios formais de segurança elétrica e sanitária (Inmetro / Anatel / Anvisa).</li>
+          <ul style="margin-top: 10px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.5;">
+            <li>Requisitos fechados de engenharia mecânica e torque do motor;</li>
+            <li>Portões formais (Gates) para congelamento da matriz de moldes plásticos;</li>
+            <li>Ensaios formais de segurança elétrica e isolamento sanitário.</li>
           </ul>
         </div>
 
         <div class="card" style="border-top: 3px solid var(--accent-teal);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <h3 class="card-title" style="color: #34d399; margin: 0;">Trilha Ágil (Scrum Sprints)</h3>
-            <span class="pill pill-green">Software & Usabilidade</span>
-          </div>
+          <h3 class="card-title" style="color: #34d399;">Trilha Ágil (Scrum Sprints Quinzenais)</h3>
           <p class="card-text">
-            Utilizada onde a adaptação rápida e a resposta ao usuário trazem valor imediato:
+            <strong>Foco:</strong> Software, firmware IoT, aplicativo do familiar e usabilidade com idosos.
           </p>
-          <ul style="margin-top: 10px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
-            <li><strong>Ciclos de Desenvolvimento Quinzenais:</strong> Sprints de entrega contínua de funcionalidades no aplicativo do cuidador;</li>
-            <li><strong>Experimentação Controlada:</strong> Prototipagem rápida em impressão 3D para testar a empunhadura do copinho com idosos reais;</li>
-            <li><strong>Adaptação Rápida de UX:</strong> Ajuste imediato do tom de voz do alarme e do fluxo de notificação do WhatsApp.</li>
+          <ul style="margin-top: 10px; margin-left: 18px; font-size: 0.85rem; color: var(--text-sub); line-height: 1.5;">
+            <li>Sprints rápidas com prototipagem em impressão 3D do copinho;</li>
+            <li>Testes com idosos reais para validar empunhadura e clareza da voz;</li>
+            <li>Iterações de software e melhorias no fluxo do WhatsApp.</li>
           </ul>
         </div>
       </div>
-
-      <div class="card" style="margin-top: 16px; padding: 14px 20px; border: 1px dashed rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.05); flex-direction: row; align-items: center; justify-content: space-between;">
-        <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: #38bdf8;">Ponto de Sincronização Híbrida:</div>
-          <div style="font-size: 0.84rem; color: var(--text-sub); margin-top: 2px;">
-            Os Gates formais do hardware só avançam após validação empírica obtida nas Sprints ágeis de prototipagem com os idosos.
-          </div>
-        </div>
-        <span class="pill pill-cyan">Zero Desperdício</span>
-      </div>
     </section>
 
-    <!-- SLIDE 8: Sprint ou Naufrágio? O Porquê do Modelo Híbrido -->
+    <!-- SLIDE 8: EVENTO INESPERADO 01 -->
     <section class="slide" data-slide="8">
       <div class="slide-header">
-        <div class="slide-category">Análise Crítica do Desafio</div>
-        <h2 class="slide-title">Sprint ou Naufrágio? Evitando as Armadilhas</h2>
-        <p class="slide-subtitle">Como protegemos o orçamento de R$ 500.000 dos dois erros clássicos de novos produtos.</p>
+        <div class="slide-category" style="color: #fbbf24;">Mudança de Escopo 01 • Adaptação Ágil</div>
+        <h2 class="slide-title">Evento Inesperado 01: A Voz do Cliente</h2>
+        <p class="slide-subtitle">Pesquisa com usuários revelou rejeição ao uso de aplicativos pelo público idoso.</p>
       </div>
 
       <div class="grid-2">
-        <div class="card" style="border-left: 4px solid var(--accent-rose);">
-          <h3 class="card-title" style="color: #fb7185;">Armadilha 1: O Naufrágio do Cascata Puro</h3>
-          <p class="card-text">
-            Passar 8 meses fechando um documento estático de engenharia de 200 páginas e gastar R$ 150.000 em moldes industriais de injeção plástica sem nunca colocar um botão na mão de um idoso.
-          </p>
-          <div style="background: rgba(244,63,94,0.08); border-radius: 8px; padding: 10px; margin-top: 12px; font-size: 0.84rem; color: #fecdd3;">
-            ⚠️ <strong>Risco de Naufrágio:</strong> Rejeição tardia pelo público-alvo, desperdício irreparável de capital e produto que ninguém consegue usar.
+        <!-- Card do Desafio -->
+        <div class="event-hud-card hud-warning">
+          <div class="event-header-badge" style="color: #fbbf24;">⚠️ EVENTO INESPERADO 01</div>
+          <div class="event-huge-title">A VOZ DO CLIENTE</div>
+          
+          <div class="event-prompt-box" style="border-color: #fbbf24;">
+            <strong>Resultado da Pesquisa:</strong> <em>"70% dos idosos NÃO querem utilizar mais um aplicativo."</em>
+            <div style="margin-top: 6px; font-weight: 600;">Eles preferem:</div>
+            <ul style="margin-left: 18px; margin-top: 4px; font-size: 0.84rem;">
+              <li>Botões grandes</li>
+              <li>Avisos sonoros</li>
+              <li>Comandos de voz</li>
+              <li>Funcionamento sem celular</li>
+            </ul>
+          </div>
+
+          <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 8px 12px; font-size: 0.8rem; color: #fde68a;">
+            🎯 <strong>MISSÃO DA EQUIPE:</strong> O que será mantido, modificado ou descartado? (Tempo: 5 min)
           </div>
         </div>
 
-        <div class="card" style="border-left: 4px solid var(--accent-amber);">
-          <h3 class="card-title" style="color: #fbbf24;">Armadilha 2: O Naufrágio do Ágil Puro em Hardware</h3>
-          <p class="card-text">
-            Tentar mudar o desenho das placas eletrônicas, motores e conectores a cada 15 dias sem congelamento formal de requisitos de engenharia elétrica e normas de segurança.
-          </p>
-          <div style="background: rgba(245,158,11,0.08); border-radius: 8px; padding: 10px; margin-top: 12px; font-size: 0.84rem; color: #fef3c7;">
-            ⚠️ <strong>Risco de Naufrágio:</strong> Explosão de custos de retrabalho eletrônico, componentes obsoletos e reprovação em certificações obrigatórias.
-          </div>
-        </div>
-      </div>
+        <!-- Resolução da Equipe -->
+        <div class="team-resolution-box">
+          <h3 style="font-family: 'Outfit'; font-size: 1.25rem; color: #34d399; margin-bottom: 10px;">
+            ✅ Decisão Estratégica da Equipe Remédio Fácil
+          </h3>
 
-      <div class="card" style="margin-top: 16px; border: 1px solid var(--accent-teal); background: rgba(16, 185, 129, 0.08); padding: 14px 20px;">
-        <div style="font-weight: 700; color: #34d399; font-size: 0.95rem;">A Vitória do Modelo Híbrido:</div>
-        <div style="font-size: 0.85rem; color: var(--text-sub); margin-top: 2px;">
-          O Ágil garante que o <strong>Remédio Fácil</strong> resolva a dor real do usuário com a melhor usabilidade possível; o Cascata garante que o produto seja seguro, certificável e viável dentro dos R$ 500 mil.
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #34d399;">
+              <strong style="color: #34d399;">🟢 O QUE É MANTIDO:</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                O aplicativo <strong>exclusivamente para a família/cuidador</strong> gerenciar e receber avisos; o hardware com carrossel físico de precisão.
+              </div>
+            </div>
+
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #38bdf8;">
+              <strong style="color: #38bdf8;">🟡 O QUE É MODIFICADO:</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Hardware ganha <strong>1 botão tátil gigante iluminado</strong>, sintetizador de voz em português e operação <strong>100% autônoma offline</strong> para o idoso.
+              </div>
+            </div>
+
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #f43f5e;">
+              <strong style="color: #f43f5e;">🔴 O QUE É DESCARTADO:</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Descartada qualquer exigência de o idoso abrir aplicativo, tocar em telas digitais ou parear Bluetooth no celular dele.
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 10px; font-size: 0.78rem; color: #94a3b8;">
+            💡 <strong>Vitória do Modelo Híbrido:</strong> O aprendizado do teste de Sprint Ágil ocorreu <em>antes</em> de congelar os moldes industriais, salvando o projeto sem retrabalho caro de engenharia.
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 9: Orçamento de R$ 500k & Cronograma -->
+    <!-- SLIDE 9: EVENTO INESPERADO 02 -->
     <section class="slide" data-slide="9">
       <div class="slide-header">
-        <div class="slide-category">Planejamento Econômico e Entrega</div>
-        <h2 class="slide-title">Orçamento de R$ 500.000 & Marcos de Entrega</h2>
-        <p class="slide-subtitle">Alocação pragmática de recursos e marcos de validação formal em 6 meses de projeto.</p>
+        <div class="slide-category" style="color: #f43f5e;">Mudança de Escopo 02 • Gestão de Crise</div>
+        <h2 class="slide-title">Evento Inesperado 02: Falha Crítica</h2>
+        <p class="slide-subtitle">Liberação indevida de duas doses no teste + choque orçamentário e redução de prazo.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Card do Desafio -->
+        <div class="event-hud-card hud-danger">
+          <div class="event-header-badge" style="color: #ef4444;">🚨 EVENTO INESPERADO 02</div>
+          <div class="event-huge-title">FALHA CRÍTICA</div>
+          
+          <div class="event-prompt-box" style="border-color: #ef4444;">
+            <strong>Ocorrência Grave:</strong> <em>"Durante um teste, o equipamento liberou duas doses do medicamento."</em>
+            <div style="display: flex; gap: 14px; margin-top: 8px; font-size: 0.78rem;">
+              <div style="flex: 1;">
+                <strong style="color: #ffffff;">Obrigatórios:</strong><br>
+                • Segurança & privacidade<br>
+                • Rastreabilidade e registros<br>
+                • Funcionar sem internet
+              </div>
+              <div style="flex: 1; color: #fca5a5;">
+                <strong>Restrições Severas:</strong><br>
+                • Orçamento -40% (R$ 300k)<br>
+                • Prazo: 6 para 3 meses<br>
+                • Apenas 2 funções finais
+              </div>
+            </div>
+          </div>
+
+          <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; color: #fecaca;">
+            🎯 <strong>MISSÃO:</strong> Tratar a falha e priorizar as 2 funções justificando a abordagem. (Tempo: 6 min)
+          </div>
+        </div>
+
+        <!-- Resolução da Equipe -->
+        <div class="team-resolution-box" style="border-color: rgba(244, 63, 94, 0.4); background: rgba(244, 63, 94, 0.06);">
+          <h3 style="font-family: 'Outfit'; font-size: 1.25rem; color: #fb7185; margin-bottom: 8px;">
+            🛡️ Resposta com Rigor de Engenharia & Priorização
+          </h3>
+
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.84rem;">
+            <div style="padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #f43f5e;">
+              <strong style="color: #fb7185;">1. Tratamento da Falha (Portão Formal de Qualidade):</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Adição de <strong>trava eletromecânica física (solenoide)</strong> que bloqueia a rotação após 1 slot liberado + <strong>sensor óptico duplo</strong> de conferência. Impossível liberar 2 doses mesmo em queda de energia.
+              </div>
+            </div>
+
+            <div style="padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #34d399;">
+              <strong style="color: #34d399;">2. As Duas Funcionalidades Finais Priorizadas:</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                <strong>Função A: Dispensa Blindada Offline:</strong> O hardware opera com relógio RTC interno e memória Flash local, registrando cada retirada sem depender de internet.<br>
+                <strong>Função B: Alerta Multissensorial & Telemetria Crítica:</strong> Avisos por voz/luz e notificação da família quando houver sinal de rede.
+              </div>
+            </div>
+
+            <div style="padding: 6px 10px; background: rgba(245, 158, 11, 0.08); border-radius: 8px;">
+              <strong style="color: #fbbf24;">Adequação de R$ 300k em 3 Meses:</strong>
+              <span style="color: var(--text-sub);">Eliminados recursos cosméticos. Concentração total do capital na segurança do carrossel mecânico e firmware local.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: EVENTO INESPERADO 03 -->
+    <section class="slide" data-slide="10">
+      <div class="slide-header">
+        <div class="slide-category" style="color: #38bdf8;">Mudança de Escopo 03 • Decisão Executiva</div>
+        <h2 class="slide-title">Evento Inesperado 03: A Hora da Decisão</h2>
+        <p class="slide-subtitle">Ameaça competitiva de lançamento em 30 dias: A diretoria exige posicionamento imediato.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Card do Desafio -->
+        <div class="event-hud-card hud-decision">
+          <div class="event-header-badge" style="color: #38bdf8;">⚡ EVENTO INESPERADO 03</div>
+          <div class="event-huge-title">A HORA DA DECISÃO</div>
+          
+          <div class="event-prompt-box" style="border-color: #38bdf8;">
+            <em>"Um concorrente anuncia o lançamento de um produto semelhante em 30 dias. A diretoria exige uma decisão sobre o futuro do projeto."</em>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; font-size: 0.72rem; text-align: center;">
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 4px; border-radius: 6px;">
+                🚀 LANÇAMENTO<br><span style="color: #94a3b8;">Pronto pro mercado</span>
+              </div>
+              <div style="background: rgba(16,185,129,0.15); border: 1px solid #10b981; padding: 8px 4px; border-radius: 6px; color: #34d399; font-weight: 700;">
+                🛡️ PILOTO CONTROLADO<br>Escopo & Segurança
+              </div>
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 4px; border-radius: 6px;">
+                ⏱️ ADIAMENTO<br><span style="color: #94a3b8;">Mais tempo</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.4); border-radius: 8px; padding: 6px 12px; font-size: 0.78rem; color: #fecdd3;">
+            ⚠️ <strong>ALERTA MÁXIMO:</strong> Sem segurança validada, não há uso real com usuários! (Tempo: 3 min)
+          </div>
+        </div>
+
+        <!-- Resolução da Equipe -->
+        <div class="team-resolution-box" style="background: rgba(6, 182, 212, 0.06); border-color: rgba(6, 182, 212, 0.35);">
+          <h3 style="font-family: 'Outfit'; font-size: 1.25rem; color: #38bdf8; margin-bottom: 8px;">
+            🛡️ Escolha da Equipe: PILOTO CONTROLADO
+          </h3>
+
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.84rem;">
+            <div style="padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+              <strong style="color: #fb7185;">Por que NÃO Lançamento em Massa?</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Lançar às pressas após uma falha de sobredose seria <strong>negligência criminal</strong>. Um único erro fatal em clientes destruiria a marca e geraria bloqueio na ANVISA.
+              </div>
+            </div>
+
+            <div style="padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+              <strong style="color: #fbbf24;">Por que NÃO Adiamento Indefinido?</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Entregaria o mercado de bandeja ao concorrente sem colher feedbacks reais do produto no mundo real.
+              </div>
+            </div>
+
+            <div style="padding: 8px 10px; background: rgba(16, 185, 129, 0.12); border-radius: 8px; border-left: 3px solid #34d399;">
+              <strong style="color: #34d399;">Evidências do Piloto Controlado (30 Famílias):</strong>
+              <div style="color: var(--text-sub); margin-top: 2px;">
+                Permite testar o lote de 30 unidades com a trava de segurança mecânica corrigida sob monitoramento médico estrito. Cria prova social inatacável para bater o concorrente com autoridade clínica.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Síntese da Metodologia Híbrida -->
+    <section class="slide" data-slide="11">
+      <div class="slide-header">
+        <div class="slide-category">Consolidação Metodológica</div>
+        <h2 class="slide-title">Sprint ou Naufrágio? A Prova de Fogo Híbrida</h2>
+        <p class="slide-subtitle">Como os três eventos demonstraram que nem o Cascata puro nem o Ágil puro teriam sobrevivido.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="border-top: 3px solid #f59e0b;">
+          <div class="pill pill-amber">Evento 01: Voz do Idoso</div>
+          <h3 class="card-title" style="margin-top: 8px;">Venceu o Ágil</h3>
+          <p class="card-text">
+            Ouvir o cliente em Sprints rápidas evitou a produção de um software inútil que os idosos rejeitariam. Adaptação imediata do hardware para botões grandes.
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 3px solid #ef4444;">
+          <div class="pill pill-rose">Evento 02: Falha Crítica</div>
+          <h3 class="card-title" style="margin-top: 8px;">Venceu o Cascata</h3>
+          <p class="card-text">
+            Sobredose de medicamento não se resolve com "gambiarras ágeis". Exigiu rigor de engenharia formal (FMEA, solenoide físico e portão formal de segurança).
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 3px solid #06b6d4;">
+          <div class="pill pill-cyan">Evento 03: Concorrência</div>
+          <h3 class="card-title" style="margin-top: 8px;">Venceu o Híbrido</h3>
+          <p class="card-text">
+            O Piloto Controlado equilibrou a velocidade de ir a campo (Ágil) com o compromisso irremovível de segurança do paciente (Cascata).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: Orçamento Readequado -->
+    <section class="slide" data-slide="12">
+      <div class="slide-header">
+        <div class="slide-category">Readequação Econômica (-40%)</div>
+        <h2 class="slide-title">Orçamento Readequado: R$ 300.000 em 3 Meses</h2>
+        <p class="slide-subtitle">Como redistribuímos os recursos após o corte orçamentário do Evento 02 para entregar o Piloto Controlado.</p>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <h3 class="card-title" style="margin-bottom: 14px;">Alocação do Capital (R$ 500k)</h3>
+          <h3 class="card-title" style="margin-bottom: 12px;">Alocação do Capital Readequado (R$ 300k)</h3>
           
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 3px;">
-              <span>Módulo de Dispensa (Hardware & PCB)</span>
-              <strong style="color: #38bdf8;">R$ 160.000 (32%)</strong>
+          <div style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+              <span>Mecânica & Trava de Segurança Eletromecânica</span>
+              <strong style="color: #38bdf8;">R$ 120.000 (40%)</strong>
             </div>
             <div style="height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;">
-              <div style="width: 32%; height: 100%; background: #38bdf8;"></div>
+              <div style="width: 40%; height: 100%; background: #38bdf8;"></div>
             </div>
           </div>
 
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 3px;">
-              <span>Aplicativo & Plataforma de Gestão / Nuvem</span>
-              <strong style="color: #34d399;">R$ 130.000 (26%)</strong>
+          <div style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+              <span>Firmware Local Offline & Memória EEPROM</span>
+              <strong style="color: #34d399;">R$ 75.000 (25%)</strong>
             </div>
             <div style="height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;">
-              <div style="width: 26%; height: 100%; background: #34d399;"></div>
+              <div style="width: 25%; height: 100%; background: #34d399;"></div>
             </div>
           </div>
 
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 3px;">
-              <span>Homologação e Conformidade (Anvisa/Inmetro)</span>
-              <strong style="color: #fbbf24;">R$ 80.000 (16%)</strong>
+          <div style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+              <span>Ensaios de Segurança Elétrica & Certificação</span>
+              <strong style="color: #fbbf24;">R$ 55.000 (18%)</strong>
             </div>
             <div style="height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;">
-              <div style="width: 16%; height: 100%; background: #fbbf24;"></div>
-            </div>
-          </div>
-
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 3px;">
-              <span>Testes de Usabilidade e UX com Idosos</span>
-              <strong style="color: #a78bfa;">R$ 70.000 (14%)</strong>
-            </div>
-            <div style="height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;">
-              <div style="width: 14%; height: 100%; background: #a78bfa;"></div>
+              <div style="width: 18%; height: 100%; background: #fbbf24;"></div>
             </div>
           </div>
 
           <div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 3px;">
-              <span>Reserva de Contingência & Patentes</span>
-              <strong style="color: #f43f5e;">R$ 60.000 (12%)</strong>
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+              <span>Execução do Piloto Controlado (30 Famílias)</span>
+              <strong style="color: #a78bfa;">R$ 50.000 (17%)</strong>
             </div>
             <div style="height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;">
-              <div style="width: 12%; height: 100%; background: #f43f5e;"></div>
+              <div style="width: 17%; height: 100%; background: #a78bfa;"></div>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title" style="margin-bottom: 12px;">Cronograma dos Portões (Gates)</h3>
+          <h3 class="card-title" style="margin-bottom: 10px;">Cronograma Compressado de 3 Meses</h3>
           
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="padding: 9px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #38bdf8;">
-              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.84rem;">
-                <span>Mês 1-2: Gate 1 - Viabilidade Técnica & Prototipagem</span>
-                <span class="pill pill-cyan">Gate 1</span>
-              </div>
-              <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">
-                Requisitos estruturados do carrossel + 3 Sprints de impressão 3D testados com 20 idosos.
-              </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #38bdf8;">
+              <div style="font-weight: 700; font-size: 0.84rem; color: #38bdf8;">Mês 1: Correção Mecânica da Falha Crítica</div>
+              <div style="font-size: 0.76rem; color: var(--text-muted);">Usinagem da trava física, firmware de bloqueio de 1 passo e ensaios de ciclo contínuo.</div>
             </div>
 
-            <div style="padding: 9px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #34d399;">
-              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.84rem;">
-                <span>Mês 3-4: Gate 2 - Integração Hardware + App</span>
-                <span class="pill pill-green">Gate 2</span>
-              </div>
-              <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">
-                PCB funcional montada, firmware IoT e piloto com 10 famílias conectadas ao aplicativo.
-              </div>
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #34d399;">
+              <div style="font-weight: 700; font-size: 0.84rem; color: #34d399;">Mês 2: Fabricação das 30 Unidades do Piloto</div>
+              <div style="font-size: 0.76rem; color: var(--text-muted);">Montagem das placas com armazenamento offline e validação elétrica em bancada.</div>
             </div>
 
-            <div style="padding: 9px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #fbbf24;">
-              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.84rem;">
-                <span>Mês 5-6: Gate 3 - Certificações & Lote Piloto</span>
-                <span class="pill pill-amber">Gate 3</span>
-              </div>
-              <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">
-                Ensaios de segurança elétrica Anvisa/Inmetro e produção do lote MVP funcional de 100 unidades.
-              </div>
+            <div style="padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid #fbbf24;">
+              <div style="font-weight: 700; font-size: 0.84rem; color: #fbbf24;">Mês 3: Instalação e Execução do Piloto Controlado</div>
+              <div style="font-size: 0.76rem; color: var(--text-muted);">Distribuição assistida para 30 famílias com suporte dedicado e coleta de telemetria.</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 10: Resumo Executivo da Primeira Rodada -->
-    <section class="slide" data-slide="10">
+    <!-- SLIDE 13: Resumo Executivo das Rodadas -->
+    <section class="slide" data-slide="13">
       <div class="slide-header">
-        <div class="slide-category">Checklist da Missão</div>
-        <h2 class="slide-title">Resumo Executivo da Primeira Rodada</h2>
-        <p class="slide-subtitle">Todos os requisitos do desafio atendidos de forma coesa e fundamentada.</p>
+        <div class="slide-category">Matriz de Respostas da Equipe</div>
+        <h2 class="slide-title">Resumo Executivo de Todas as Rodadas</h2>
+        <p class="slide-subtitle">Visão consolidada das decisões técnicas perante cada desafio imposto pela dinâmica.</p>
       </div>
 
-      <div class="grid-2">
-        <div class="card">
-          <table class="table-compare">
-            <tbody>
-              <tr>
-                <td style="color: var(--accent-cyan); font-weight: 700; width: 38%;">Nome do Produto:</td>
-                <td><strong>Remédio Fácil</strong></td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-cyan); font-weight: 700;">Público Específico:</td>
-                <td>Pessoas idosas polimedicadas com esquecimento/confusão de dose + familiares/cuidadores.</td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-cyan); font-weight: 700;">3 Funcionalidades:</td>
-                <td>
-                  1. Gestão de medicamentos e receitas<br>
-                  2. Alertas e notificação dos familiares<br>
-                  3. Módulo de dispensa inteligente (Hardware motorizado integrado ao app)
-                </td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-cyan); font-weight: 700;">Diferencial:</td>
-                <td>Zero atrito digital para o idoso (somente copinho e voz) + controle e segurança na mão da família.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="card">
-          <table class="table-compare">
-            <tbody>
-              <tr>
-                <td style="color: var(--accent-teal); font-weight: 700; width: 38%;">Representação Visual:</td>
-                <td>Protótipo interativo do hardware rotativo sincronizado ao app móvel com síntese de voz.</td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-teal); font-weight: 700;">Organização do Dev.:</td>
-                <td><strong>Modelo Híbrido:</strong> Cascata/Stage-Gate para Hardware e Normas + Ágil/Scrum para App e UX.</td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-teal); font-weight: 700;">Orçamento:</td>
-                <td>R$ 500.000 distribuídos entre engenharia, software, usabilidade, certificações e contingência.</td>
-              </tr>
-              <tr>
-                <td style="color: var(--accent-teal); font-weight: 700;">Organização da Equipe:</td>
-                <td>Registrador, Timekeeper, Apresentador e Guardião da Abordagem Híbrida.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="card" style="padding: 16px;">
+        <table class="table-compare">
+          <thead>
+            <tr>
+              <th>Etapa da Dinâmica</th>
+              <th>Desafio Imposto</th>
+              <th>Decisão Estratégica da Equipe</th>
+              <th>Pilar Híbrido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1ª Rodada: Concepção</strong></td>
+              <td>Criar organizador com R$ 500k</td>
+              <td>Nome <strong>Remédio Fácil</strong>, 3 funções, protótipo interativo e divisão de papéis da equipe.</td>
+              <td><span class="pill pill-cyan">Stage-Gate + Scrum</span></td>
+            </tr>
+            <tr>
+              <td><strong>Evento 01: Voz do Cliente</strong></td>
+              <td>70% dos idosos rejeitam aplicativos</td>
+              <td>App mantido apenas para familiares; hardware ganha botão grande, voz e modo offline para o idoso.</td>
+              <td><span class="pill pill-green">Adaptação Ágil</span></td>
+            </tr>
+            <tr>
+              <td><strong>Evento 02: Falha Crítica</strong></td>
+              <td>Liberou 2 doses (-40% verba, 3 meses)</td>
+              <td>Trava eletromecânica física anti-sobredose; foco nas 2 funções críticas com funcionamento sem internet.</td>
+              <td><span class="pill pill-rose">Controle Cascata</span></td>
+            </tr>
+            <tr>
+              <td><strong>Evento 03: Decisão Concorrente</strong></td>
+              <td>Lançamento rival em 30 dias</td>
+              <td>Escolha pelo <strong>Piloto Controlado</strong> (30 famílias). Segurança médica validada antes de escala.</td>
+              <td><span class="pill pill-purple">Equilíbrio Híbrido</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <!-- SLIDE 11: Conclusão & Pitch Final -->
-    <section class="slide hero-slide" data-slide="11">
+    <!-- SLIDE 14: Conclusão & Pitch Final -->
+    <section class="slide hero-slide" data-slide="14">
       <div class="hero-badge" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">
-        <span>🎯 Remédio Fácil: Segurança para Quem Toma, Paz para Quem Cuida</span>
+        <span>🎯 Veredito da Equipe Remédio Fácil: Missão Cumprida com Resiliência</span>
       </div>
-      <h2 class="hero-title" style="font-size: 2.8rem; margin-bottom: 10px;">
-        Prontos para o Sucesso da Missão!
+      <h2 class="hero-title" style="font-size: 2.7rem; margin-bottom: 10px;">
+        Sobrevivemos ao Naufrágio e Vencemos no Sprint!
       </h2>
-      <p class="hero-subtitle" style="max-width: 800px; font-size: 1.05rem;">
-        Com o <strong>Remédio Fácil</strong>, transformamos a angústia do esquecimento medicamentoso em autonomia com dignidade para os idosos e tranquilidade para as famílias brasileiras.
+      <p class="hero-subtitle" style="max-width: 820px; font-size: 1.05rem;">
+        O <strong>Remédio Fácil</strong> provou que a inovação real em produtos físicos e saúde não suporta dogmas: a flexibilidade ágil acolhe o idoso e a disciplina em cascata protege a sua vida.
       </p>
 
-      <div style="display: flex; gap: 14px; margin-top: 10px;">
-        <button class="btn-nav" onclick="goToSlide(6)" style="padding: 9px 20px;">
-          📱 Ver Protótipo Interativo
+      <div style="display: flex; gap: 14px; margin-top: 12px;">
+        <button class="btn-nav" onclick="goToSlide(8)" style="padding: 9px 20px;">
+          ⚠️ Ver Eventos Inesperados (Slides 8 a 10)
         </button>
         <button class="btn-nav secondary" onclick="goToSlide(1)" style="padding: 9px 20px;">
           🔄 Reiniciar Apresentação
@@ -1405,7 +1517,7 @@
 
   </main>
 
-  <!-- Bottom Navigation -->
+  <!-- Bottom Bar -->
   <footer class="bottom-bar">
     <div class="nav-hints">
       <span>Navegue com: <span class="kbd">←</span> <span class="kbd">→</span> ou <span class="kbd">Espaço</span></span>
@@ -1467,7 +1579,7 @@
   <!-- Scripts -->
   <script>
     let currentSlide = 1;
-    const totalSlides = 11;
+    const totalSlides = 14;
     const slides = document.querySelectorAll('.slide');
     const currentSlideNum = document.getElementById('currentSlideNum');
     const totalSlidesNum = document.getElementById('totalSlidesNum');
@@ -1569,7 +1681,7 @@
       }
     });
 
-    /* Protótipo Interativo Remédio Fácil */
+    /* Protótipo Interativo */
     const btnSimulateTime = document.getElementById('btnSimulateTime');
     const btnTakePill = document.getElementById('btnTakePill');
     const ledRing = document.getElementById('ledRing');
